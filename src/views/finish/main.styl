@@ -1,0 +1,80 @@
+@import '~common/stylus/variable'
+@import '~common/stylus/mixin'
+.finish
+  background-color #cc4f30
+  overflow hidden
+  padding-bottom 130px
+  box-sizing border-box
+  .header
+    bg-image('bg-inside')
+    position relative
+    background-position -50px bottom
+    height 224px
+    &::before
+      bg-image('logo_2', 436px, 60px)
+      pos-x()
+      content ''
+  .box
+    position relative
+    margin auto auto 50px
+    &:before, &:after
+      position absolute
+      content ''
+      z-index 1
+    &:before
+      bg-image('color-bar', 61px, 45px)
+      top -25px
+    &:after
+      bg-image('coin', 150px, 223px)
+      right -40px
+      top -80px
+    .text
+      margin-bottom 20px
+      font-size $font-size-medium
+      &.success
+        font-weight 700
+        font-size $font-size-medium-x
+        &:before
+          bg-image('icon-success', 34px, 34px)
+          display inline-block
+          vertical-align top
+          margin-right 10px
+          margin-top -3px
+          content ''
+    .submit-btn-wrapper
+      display flex
+      flex-direction column
+      height 550px
+      margin-bottom -80px
+      justify-content space-between
+      &.second
+        margin-bottom 0
+        padding-bottom 40px
+        .img
+          order 0
+    .submit-btn
+      submit-btn()
+      margin-bottom 20px
+      order 1
+    .tip
+      order 2
+      color $color-dark-grey
+      font-size $font-size-medium
+      margin 0 -50px
+    .img
+      position relative
+      bg-image('card_type', 488px, 276px)
+      margin auto
+      order 3
+      .num
+        position absolute
+        top 228px
+        left 50%
+        transform translatex(-52%)
+        font-size 26px
+        color #ffe2bc
+  .bar
+    position fixed
+    bottom 0
+    left 0
+    right 0

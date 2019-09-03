@@ -1,0 +1,45 @@
+@import 'variable.styl'
+@import 'mixin.styl'
+body, html
+  line-height 1
+  font-family 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback'
+  user-select none
+  -webkit-tap-highlight-color transparent
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  color $color-text
+body
+  bg-image('header')
+  background-position 0 -15px
+  background-size contain
+  background-color #ba492c
+  color $color-dark-grey
+.font-red
+  color #e93622
+.font-green
+  color #0ed513
+.font-white
+  color #fff
+.font-blue
+  color #3f66df
+.font-weight
+  font-weight 600
+.loading
+  pos-center()
+  z-index 9
+  width 24px
+  height 24px
+  text-align cenrer
+.rule-btn
+  bg-image('rule-btn', 86px, 97px)
+  text-indent: -9999px
+  position absolute
+  right 30px
+  top 0
+  z-index 9
+// fade动画
+.fade-enter-active, .fade-leave-active
+  transition all 0.2s
+.fade-enter, .fade-leave-to
+  transform translate3d(35%, 0, 0)
+  opacity 0

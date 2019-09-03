@@ -1,0 +1,88 @@
+/*
+ * pixelborder.css -https://github.com/JofunLiang/pixelborder
+ * Version - 1.0.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ * Copyright (c) 2018 jofun Liang
+ */
+$border-color = #d7d7d7
+
+/* utils */
+[pixel-border]
+  position relative
+  border-width 0
+  border-color $border-color
+[pixel-border]:after
+  display block
+  content ''
+  width 100%
+  height 100%
+  border-radius inherit
+  border-color inherit
+  border-style solid
+  border-width 0
+  box-sizing border-box
+  position absolute
+  left 0
+  top 0
+/* setting border-width */
+[pixel-border=top]:after
+  border-top-width 1px
+[pixel-border=bottom]:after
+  border-bottom-width 1px
+[pixel-border=level]:after
+  border-top-width 1px
+  border-bottom-width 1px
+[pixel-border=left]:after
+  border-left-width 1px
+[pixel-border=right]:after
+  border-right-width 1px
+[pixel-border=vertical]:after
+  border-left-width 1px
+  border-right-width 1px
+[pixel-border=all]:after
+  border-width 1px
+/* media responsed */
+@media (-webkit-min-device-pixel-ratio: 1.25), (-o-min-device-pixel-ratio: 125 / 100), (min-moz-device-pixel-ratio: 1.25), (min-device-pixel-ratio: 1.25)
+  [pixel-border]:after
+    width 125%
+    height 125%
+    -webkit-transform scale(0.8, 0.8)
+    transform scale(0.8, 0.8)
+    -webkit-transform-origin left top
+    transform-origin left top
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 150 / 100), (min-moz-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)
+  [pixel-border]:after
+    width 150%
+    height 150%
+    -webkit-transform scale(0.66666, 0.66666)
+    transform scale(0.66666, 0.66666)
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 200 / 100), (min-moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+  [pixel-border]:after
+    width 200%
+    height 200%
+    -webkit-transform scale(0.5, 0.5)
+    transform scale(0.5, 0.5)
+@media (-webkit-min-device-pixel-ratio: 2.5), (-o-min-device-pixel-ratio: 250 / 100), (min-moz-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5)
+  [pixel-border]:after
+    width 250%
+    height 250%
+    -webkit-transform scale(0.4, 0.4)
+    transform scale(0.4, 0.4)
+@media (-webkit-min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 300 / 100), (min-moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+  [pixel-border]:after
+    width 300%
+    height 300%
+    -webkit-transform scale(0.33333, 0.33333)
+    transform scale(0.33333, 0.33333)
+@media (-webkit-min-device-pixel-ratio: 3.5), (-o-min-device-pixel-ratio: 350 / 100), (min-moz-device-pixel-ratio: 3.5), (min-device-pixel-ratio: 3.5)
+  [pixel-border]:after
+    width 350%
+    height 350%
+    -webkit-transform scale(0.28571, 0.28571)
+    transform scale(0.28571, 0.28571)
+@media (-webkit-min-device-pixel-ratio: 4), (-o-min-device-pixel-ratio: 400 / 100), (min-moz-device-pixel-ratio: 4), (min-device-pixel-ratio: 4)
+  [pixel-border]:after
+    width 400%
+    height 400%
+    -webkit-transform scale(0.25, 0.25)
+    transform scale(0.25, 0.25)
